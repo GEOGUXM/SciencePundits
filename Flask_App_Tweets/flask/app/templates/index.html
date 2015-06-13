@@ -1,0 +1,27 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<body>
+    <h1>Science Pundit</h1>
+    <h2>Please Enter the url of the article</h2>
+    <form action="." method="POST">
+        <input type="text" name="text">
+        <input type="submit" name="my-form" value="Get Category">
+    </form>
+</body>
+</html> -->
+{% extends "base.html" %}
+{% block content %}
+    <h1>Science Pundit!</h1>
+    <h2>Please Enter the url of the article</h2>
+    <form action="." method="POST">
+        <input type="text" name="text">
+        <input type="submit" name="my-form" value="Send">
+    </form>
+<!--     <h1>The url you entered is, {{article_url}}!</h1>
+ -->    
+ {% for post in posts %}
+    <p>
+      {{ post.author.nickname }} says: <b>{{ post.body }}</b>
+    </p>
+    {% endfor %}
+{% endblock %}

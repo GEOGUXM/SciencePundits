@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<table>
+<select>
+{% for user in users %}
+    <option value="{{ user.id }}">user</option>
+{% endfor %}
+</select>
+</table>
+</body>
+</html>
